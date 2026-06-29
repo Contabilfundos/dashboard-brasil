@@ -1,7 +1,7 @@
 <html lang="pt-BR"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bolão – Brasil x Escócia | Copa 2026</title>
+<title>Bolão – Brasil x Japão | Copa 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -17,8 +17,8 @@
     --texto:        #1a1f2e;
     --texto-suave:  #7a869a;
     --verde-escuro: #005c24;
-    --escocia:      #003fa5;
-    --escocia-light:#3d6bcc;
+    --japao:        #bc002d;
+    --japao-light:  #e63350;
   }
   body { background: var(--cinza-fundo); color: var(--texto); font-family: 'Inter', sans-serif; min-height:100vh; overflow-x:hidden; }
 
@@ -130,7 +130,7 @@
   .flag-wrap svg { width:100%; height:100%; display:block; }
   .team-name { font-family:'Bebas Neue',sans-serif; font-size:30px; letter-spacing:3px; }
   .team-name.bra { color: var(--amarelo-vivo); }
-  .team-name.sco { color: #93b4f5; }
+  .team-name.jap { color: #ff6680; }
   .vs-col { display:flex; flex-direction:column; align-items:center; gap:6px; }
   .vs-label { font-family:'Bebas Neue',sans-serif; font-size:54px; color:rgba(255,255,255,0.22); line-height:1; }
   .match-date { font-size:12px; font-weight:700; letter-spacing:2px; color:var(--amarelo-vivo); text-transform:uppercase; }
@@ -199,14 +199,14 @@
   .mstat-lbl { font-size:10px; color:var(--texto-suave); margin-top:3px; }
   .c-verde   { color: var(--verde); }
   .c-amarelo { color: #c89f00; }
-  .c-azul    { color: var(--escocia-light); }
+  .c-azul    { color: var(--ejapcia-light); }
   .c-laranja { color: var(--laranja); }
 
   /* ══ BARS ══ */
   .pbar-list { display:flex; flex-direction:column; gap:11px; }
   .pbar-item { display:flex; flex-direction:column; gap:6px; }
   .pbar-head { display:flex; justify-content:space-between; align-items:center; gap:8px; }
-  .pbar-score { font-family:'Bebas Neue',sans-serif; font-size:17px; color:var(--texto); letter-spacing:1px; }
+  .pbar-japre { font-family:'Bebas Neue',sans-serif; font-size:17px; color:var(--texto); letter-spacing:1px; }
   .pbar-cnt   { font-size:11px; color:var(--texto-suave); }
   .pbar-prize { font-size:11px; font-weight:700; color: #166534; margin-left:auto; background:#dcfce7; padding:2px 8px; border-radius:6px; }
   .track { height:5px; background:var(--cinza-borda); border-radius:3px; overflow:hidden; }
@@ -327,12 +327,12 @@
     .hstat:nth-child(2) { border-right:none; }
   }
 </style>
-<meta id="dcngeagmmhegagicpcmpinaoklddcgon"></head>
+<meta id="dcngeagmmhegagicpcmpinaoklddcgon"><meta id="dcngeagmmhegagicpcmpinaoklddcgon"></head>
 <body>
 
 <!-- ══ TOPBAR ══ -->
 <nav class="topbar">
-  <div class="topbar-brand">⚽ <span>Bolão</span> Brasil × Escócia</div>
+  <div class="topbar-brand">⚽ <span>Bolão</span> Brasil × Japão</div>
   <div class="upload-zone">
     <span class="upload-label">Atualizar dados</span>
     <button class="upload-btn" onclick="openModal()">
@@ -352,7 +352,7 @@
       </svg>
       Baixar HTML
     </button>
-    <span class="upload-status ok" id="upload-status" style="display: none;">↓ HTML baixado com sucesso</span>
+    <span class="upload-status ok" id="upload-status" style="display: none;">✓ 21 apostas carregadas</span>
   </div>
 </nav>
 
@@ -381,21 +381,20 @@
       <div class="team">
         <div class="flag-wrap">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 504">
-            <rect width="720" height="504" fill="#003fa5"></rect>
-            <line x1="0" y1="0" x2="720" y2="504" stroke="white" stroke-width="96"></line>
-            <line x1="720" y1="0" x2="0" y2="504" stroke="white" stroke-width="96"></line>
+            <rect width="720" height="504" fill="#ffffff"></rect>
+            <circle cx="360" cy="252" r="150" fill="#bc002d"></circle>
           </svg>
         </div>
-        <div class="team-name sco">Escócia</div>
+        <div class="team-name jap">Japão</div>
       </div>
     </div>
   </div>
   <div class="hero-statsbar">
     <div class="hero-statsbar-inner" id="hero-statsbar">
-      <div class="hstat"><div class="hstat-label">Participantes</div><div class="hstat-value green" id="hs-part">39</div><div class="hstat-sub">apostadores</div></div>
-      <div class="hstat"><div class="hstat-label">Prêmio Total</div><div class="hstat-value yellow" id="hs-prize">R$780</div><div class="hstat-sub" id="hs-prize-sub">R$ 20 por aposta</div></div>
-      <div class="hstat"><div class="hstat-label">Placar Favorito</div><div class="hstat-value white" id="hs-fav">2 × 0</div><div class="hstat-sub" id="hs-fav-sub">12 apostas (31%)</div></div>
-      <div class="hstat"><div class="hstat-label">Maior Prêmio</div><div class="hstat-value orange" id="hs-top">R$780</div><div class="hstat-sub">aposta isolada</div></div>
+      <div class="hstat"><div class="hstat-label">Participantes</div><div class="hstat-value green" id="hs-part">21</div><div class="hstat-sub">apostadores</div></div>
+      <div class="hstat"><div class="hstat-label">Prêmio Total</div><div class="hstat-value yellow" id="hs-prize">R$420</div><div class="hstat-sub" id="hs-prize-sub">R$ 20 por aposta</div></div>
+      <div class="hstat"><div class="hstat-label">Placar Favorito</div><div class="hstat-value white" id="hs-fav">2 × 1</div><div class="hstat-sub" id="hs-fav-sub">8 apostas (38%)</div></div>
+      <div class="hstat"><div class="hstat-label">Maior Prêmio</div><div class="hstat-value orange" id="hs-top">R$420</div><div class="hstat-sub">aposta isolada</div></div>
     </div>
   </div>
 </header>
@@ -406,12 +405,12 @@
   <div class="card">
     <div class="card-title">Visão Geral</div>
     <div class="mini-stats" id="mini-stats">
-      <div class="mstat"><div class="mstat-val c-verde" id="ms-total">39</div><div class="mstat-lbl">Apostadores</div></div>
-      <div class="mstat"><div class="mstat-val c-amarelo" id="ms-unique">9</div><div class="mstat-lbl">Placares únicos</div></div>
+      <div class="mstat"><div class="mstat-val c-verde" id="ms-total">21</div><div class="mstat-lbl">Apostadores</div></div>
+      <div class="mstat"><div class="mstat-val c-amarelo" id="ms-unique">7</div><div class="mstat-lbl">Placares únicos</div></div>
       <div class="mstat"><div class="mstat-val c-azul" id="ms-avgbra">2,2</div><div class="mstat-lbl">Média gols BRA</div></div>
-      <div class="mstat"><div class="mstat-val c-azul" id="ms-avgsco">0,5</div><div class="mstat-lbl">Média gols SCO</div></div>
-      <div class="mstat"><div class="mstat-val" style="color:#e05555" id="ms-minbra">0</div><div class="mstat-lbl">Mín gols Brasil</div></div>
-      <div class="mstat"><div class="mstat-val c-verde" id="ms-maxbra">5</div><div class="mstat-lbl">Máx gols Brasil</div></div>
+      <div class="mstat"><div class="mstat-val c-azul" id="ms-avgjap">0,8</div><div class="mstat-lbl">Média gols JAP</div></div>
+      <div class="mstat"><div class="mstat-val" style="color:#e05555" id="ms-minbra">1</div><div class="mstat-lbl">Mín gols Brasil</div></div>
+      <div class="mstat"><div class="mstat-val c-verde" id="ms-maxbra">3</div><div class="mstat-lbl">Máx gols Brasil</div></div>
     </div>
   </div>
 
@@ -420,67 +419,59 @@
     <div class="pbar-list" id="pbar-list">
     <div class="pbar-item">
       <div class="pbar-head">
-        <span class="pbar-score">🇧🇷 2 × 0 🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
-        <span class="pbar-cnt">12 apostas</span>
-        <span class="pbar-prize">R$ 65,00</span>
+        <span class="pbar-japre">🇧🇷 2 × 1 🇯🇵</span>
+        <span class="pbar-cnt">8 apostas</span>
+        <span class="pbar-prize">R$ 52,50</span>
       </div>
       <div class="track"><div class="fill" style="width:100.0%"></div></div>
     </div>
     <div class="pbar-item">
       <div class="pbar-head">
-        <span class="pbar-score">🇧🇷 2 × 1 🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
-        <span class="pbar-cnt">8 apostas</span>
-        <span class="pbar-prize">R$ 97,50</span>
+        <span class="pbar-japre">🇧🇷 2 × 0 🇯🇵</span>
+        <span class="pbar-cnt">5 apostas</span>
+        <span class="pbar-prize">R$ 84,00</span>
       </div>
-      <div class="track"><div class="fill" style="width:66.7%"></div></div>
+      <div class="track"><div class="fill" style="width:62.5%"></div></div>
     </div>
     <div class="pbar-item">
       <div class="pbar-head">
-        <span class="pbar-score">🇧🇷 3 × 1 🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
-        <span class="pbar-cnt">6 apostas</span>
-        <span class="pbar-prize">R$ 130,00</span>
+        <span class="pbar-japre">🇧🇷 3 × 1 🇯🇵</span>
+        <span class="pbar-cnt">4 apostas</span>
+        <span class="pbar-prize">R$ 105,00</span>
       </div>
       <div class="track"><div class="fill" style="width:50.0%"></div></div>
     </div>
     <div class="pbar-item">
       <div class="pbar-head">
-        <span class="pbar-score">🇧🇷 1 × 0 🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
-        <span class="pbar-cnt">4 apostas</span>
-        <span class="pbar-prize">R$ 195,00</span>
-      </div>
-      <div class="track"><div class="fill" style="width:33.3%"></div></div>
-    </div>
-    <div class="pbar-item">
-      <div class="pbar-head">
-        <span class="pbar-score">🇧🇷 3 × 0 🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
-        <span class="pbar-cnt">3 apostas</span>
-        <span class="pbar-prize">R$ 260,00</span>
-      </div>
-      <div class="track"><div class="fill" style="width:25.0%"></div></div>
-    </div>
-    <div class="pbar-item">
-      <div class="pbar-head">
-        <span class="pbar-score">🇧🇷 1 × 1 🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
-        <span class="pbar-cnt">2 apostas</span>
-        <span class="pbar-prize">R$ 390,00</span>
-      </div>
-      <div class="track"><div class="fill" style="width:16.7%"></div></div>
-    </div>
-    <div class="pbar-item">
-      <div class="pbar-head">
-        <span class="pbar-score">🇧🇷 4 × 0 🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
-        <span class="pbar-cnt">2 apostas</span>
-        <span class="pbar-prize">R$ 390,00</span>
-      </div>
-      <div class="track"><div class="fill" style="width:16.7%"></div></div>
-    </div>
-    <div class="pbar-item">
-      <div class="pbar-head">
-        <span class="pbar-score">🇧🇷 0 × 0 🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+        <span class="pbar-japre">🇧🇷 1 × 0 🇯🇵</span>
         <span class="pbar-cnt">1 aposta</span>
-        <span class="pbar-prize">R$ 780,00</span>
+        <span class="pbar-prize">R$ 420,00</span>
       </div>
-      <div class="track"><div class="fill" style="width:8.3%"></div></div>
+      <div class="track"><div class="fill" style="width:12.5%"></div></div>
+    </div>
+    <div class="pbar-item">
+      <div class="pbar-head">
+        <span class="pbar-japre">🇧🇷 1 × 2 🇯🇵</span>
+        <span class="pbar-cnt">1 aposta</span>
+        <span class="pbar-prize">R$ 420,00</span>
+      </div>
+      <div class="track"><div class="fill" style="width:12.5%"></div></div>
+    </div>
+    <div class="pbar-item">
+      <div class="pbar-head">
+        <span class="pbar-japre">🇧🇷 3 × 2 🇯🇵</span>
+        <span class="pbar-cnt">1 aposta</span>
+        <span class="pbar-prize">R$ 420,00</span>
+      </div>
+      <div class="track"><div class="fill" style="width:12.5%"></div></div>
+    </div>
+    <div class="pbar-item">
+      <div class="pbar-head">
+        <span class="pbar-japre">🇧🇷 3 × 0 🇯🇵</span>
+        <span class="pbar-cnt">1 aposta</span>
+        <span class="pbar-prize">R$ 420,00</span>
+      </div>
+      <div class="track"><div class="fill" style="width:12.5%"></div></div>
     </div></div>
   </div>
 
@@ -488,66 +479,51 @@
     <div class="card-title">Gols Esperados — Brasil</div>
     <div class="gbar-list" id="gbra">
     <div class="gbar-row">
-      <div class="gbar-lbl">0 gols</div>
-      <div class="gbar-track"><div class="gbar-fill" style="width:5%;background:#22c55e"></div></div>
-      <div class="gbar-cnt">1</div>
-    </div>
-    <div class="gbar-row">
       <div class="gbar-lbl">1 gol</div>
-      <div class="gbar-track"><div class="gbar-fill" style="width:30%;background:#16a34a"></div></div>
-      <div class="gbar-cnt">6</div>
-    </div>
-    <div class="gbar-row">
-      <div class="gbar-lbl">2 gols</div>
-      <div class="gbar-track"><div class="gbar-fill" style="width:100%;background:#15803d"></div></div>
-      <div class="gbar-cnt">20</div>
-    </div>
-    <div class="gbar-row">
-      <div class="gbar-lbl">3 gols</div>
-      <div class="gbar-track"><div class="gbar-fill" style="width:45%;background:#166534"></div></div>
-      <div class="gbar-cnt">9</div>
-    </div>
-    <div class="gbar-row">
-      <div class="gbar-lbl">4 gols</div>
-      <div class="gbar-track"><div class="gbar-fill" style="width:10%;background:#14532d"></div></div>
+      <div class="gbar-track"><div class="gbar-fill" style="width:15%;background:#22c55e"></div></div>
       <div class="gbar-cnt">2</div>
     </div>
     <div class="gbar-row">
-      <div class="gbar-lbl">5 gols</div>
-      <div class="gbar-track"><div class="gbar-fill" style="width:5%;background:#052e16"></div></div>
-      <div class="gbar-cnt">1</div>
+      <div class="gbar-lbl">2 gols</div>
+      <div class="gbar-track"><div class="gbar-fill" style="width:100%;background:#16a34a"></div></div>
+      <div class="gbar-cnt">13</div>
+    </div>
+    <div class="gbar-row">
+      <div class="gbar-lbl">3 gols</div>
+      <div class="gbar-track"><div class="gbar-fill" style="width:46%;background:#15803d"></div></div>
+      <div class="gbar-cnt">6</div>
     </div></div>
   </div>
 
   <div class="card">
-    <div class="card-title">Gols Esperados — Escócia</div>
-    <div class="gbar-list" id="gsco">
+    <div class="card-title">Gols Esperados — Japão</div>
+    <div class="gbar-list" id="gjap">
     <div class="gbar-row">
       <div class="gbar-lbl">0 gols</div>
-      <div class="gbar-track"><div class="gbar-fill" style="width:100%;background:#60a5fa"></div></div>
-      <div class="gbar-cnt">22</div>
+      <div class="gbar-track"><div class="gbar-fill" style="width:58%;background:#60a5fa"></div></div>
+      <div class="gbar-cnt">7</div>
     </div>
     <div class="gbar-row">
       <div class="gbar-lbl">1 gol</div>
-      <div class="gbar-track"><div class="gbar-fill" style="width:73%;background:#3b82f6"></div></div>
-      <div class="gbar-cnt">16</div>
+      <div class="gbar-track"><div class="gbar-fill" style="width:100%;background:#3b82f6"></div></div>
+      <div class="gbar-cnt">12</div>
     </div>
     <div class="gbar-row">
       <div class="gbar-lbl">2 gols</div>
-      <div class="gbar-track"><div class="gbar-fill" style="width:5%;background:#2563eb"></div></div>
-      <div class="gbar-cnt">1</div>
+      <div class="gbar-track"><div class="gbar-fill" style="width:17%;background:#2563eb"></div></div>
+      <div class="gbar-cnt">2</div>
     </div></div>
   </div>
 
   <div class="card">
     <div class="card-title">Tendência do Resultado</div>
     <div class="donut-wrap">
-      <svg width="130" height="130" viewBox="0 0 130 130" id="donut"><path d="M65.0,33.0 L65.0,13.0 A52,52 0 1 1 40.8,19.0 L50.1,36.7 A32,32 0 1 0 65.0,33.0 Z" fill="#16a34a"></path><path d="M50.1,36.7 L40.8,19.0 A52,52 0 0 1 65.0,13.0 L65.0,33.0 A32,32 0 0 0 50.1,36.7 Z" fill="#ca8a04"></path><path d="M65.0,33.0 L65.0,13.0 A52,52 0 0 1 65.0,13.0 L65.0,33.0 A32,32 0 0 0 65.0,33.0 Z" fill="#3b82f6"></path><text x="65" y="63" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="24" fill="#166534">36</text>
+      <svg width="130" height="130" viewBox="0 0 130 130" id="donut"><path d="M65.0,33.0 L65.0,13.0 A52,52 0 1 1 49.7,15.3 L55.6,34.4 A32,32 0 1 0 65.0,33.0 Z" fill="#16a34a"></path><path d="M55.6,34.4 L49.7,15.3 A52,52 0 0 1 49.7,15.3 L55.6,34.4 A32,32 0 0 0 55.6,34.4 Z" fill="#ca8a04"></path><path d="M55.6,34.4 L49.7,15.3 A52,52 0 0 1 65.0,13.0 L65.0,33.0 A32,32 0 0 0 55.6,34.4 Z" fill="#bc002d"></path><text x="65" y="63" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="24" fill="#166534">20</text>
      <text x="65" y="79" text-anchor="middle" font-size="8.5" fill="#7a869a">apostam Brasil</text></svg>
       <div class="legend" id="legend">
-    <div class="leg-item"><div class="leg-dot" style="background:#16a34a"></div><span>Vitória Brasil</span><span class="leg-val">36</span></div>
-    <div class="leg-item"><div class="leg-dot" style="background:#ca8a04"></div><span>Empate</span><span class="leg-val">3</span></div>
-    <div class="leg-item"><div class="leg-dot" style="background:#3b82f6"></div><span>Vitória Escócia</span><span class="leg-val">0</span></div></div>
+    <div class="leg-item"><div class="leg-dot" style="background:#16a34a"></div><span>Vitória Brasil</span><span class="leg-val">20</span></div>
+    <div class="leg-item"><div class="leg-dot" style="background:#ca8a04"></div><span>Empate</span><span class="leg-val">0</span></div>
+    <div class="leg-item"><div class="leg-dot" style="background:#bc002d"></div><span>Vitória Japão</span><span class="leg-val">1</span></div></div>
     </div>
   </div>
 
@@ -557,385 +533,237 @@
     <div class="wrow">
       <div class="wrank gold">🥇</div>
       <div class="winfo">
-        <div class="wname">Jonathas Araújo</div>
-        <div class="wdetail">🇧🇷 0 × 0 🏴󠁧󠁢󠁳󠁣󠁴󠁿 · 1 apostador</div>
+        <div class="wname">Karen Marcolongo</div>
+        <div class="wdetail">🇧🇷 1 × 0 🇯🇵 · 1 apostador</div>
       </div>
       <div>
-        <div class="wprize">R$ 780,00</div>
+        <div class="wprize">R$ 420,00</div>
         <div class="wprize-lbl">por pessoa</div>
       </div>
     </div>
     <div class="wrow">
       <div class="wrank ">🥈</div>
       <div class="winfo">
-        <div class="wname">Roberto de Andrade</div>
-        <div class="wdetail">🇧🇷 5 × 2 🏴󠁧󠁢󠁳󠁣󠁴󠁿 · 1 apostador</div>
+        <div class="wname">Mayara Guimarães</div>
+        <div class="wdetail">🇧🇷 1 × 2 🇯🇵 · 1 apostador</div>
       </div>
       <div>
-        <div class="wprize">R$ 780,00</div>
+        <div class="wprize">R$ 420,00</div>
         <div class="wprize-lbl">por pessoa</div>
       </div>
     </div>
     <div class="wrow">
       <div class="wrank ">🥉</div>
       <div class="winfo">
-        <div class="wname">André Faria, Ana Coutinho</div>
-        <div class="wdetail">🇧🇷 1 × 1 🏴󠁧󠁢󠁳󠁣󠁴󠁿 · 2 apostadores</div>
+        <div class="wname">Lucas Santiago</div>
+        <div class="wdetail">🇧🇷 3 × 2 🇯🇵 · 1 apostador</div>
       </div>
       <div>
-        <div class="wprize">R$ 390,00</div>
+        <div class="wprize">R$ 420,00</div>
         <div class="wprize-lbl">por pessoa</div>
       </div>
     </div>
     <div class="wrow">
       <div class="wrank ">4</div>
       <div class="winfo">
-        <div class="wname">Aurélio Fagundes, Paula Morishita</div>
-        <div class="wdetail">🇧🇷 4 × 0 🏴󠁧󠁢󠁳󠁣󠁴󠁿 · 2 apostadores</div>
+        <div class="wname">Mateus Becker</div>
+        <div class="wdetail">🇧🇷 3 × 0 🇯🇵 · 1 apostador</div>
       </div>
       <div>
-        <div class="wprize">R$ 390,00</div>
+        <div class="wprize">R$ 420,00</div>
         <div class="wprize-lbl">por pessoa</div>
       </div>
     </div>
     <div class="wrow">
       <div class="wrank ">5</div>
       <div class="winfo">
-        <div class="wname">Karen Marcolongo, Rafael Holanda, Matheus Saliba</div>
-        <div class="wdetail">🇧🇷 3 × 0 🏴󠁧󠁢󠁳󠁣󠁴󠁿 · 3 apostadores</div>
+        <div class="wname">Ernildo Pereira, Leticia Penna, Yuri Laplaca, Pedro Aires</div>
+        <div class="wdetail">🇧🇷 3 × 1 🇯🇵 · 4 apostadores</div>
       </div>
       <div>
-        <div class="wprize">R$ 260,00</div>
+        <div class="wprize">R$ 105,00</div>
         <div class="wprize-lbl">por pessoa</div>
       </div>
     </div>
     <div class="wrow">
       <div class="wrank ">6</div>
       <div class="winfo">
-        <div class="wname">Everton Bergstran, Mayara Guimarães, Fernando Romero, Maurigreyck Albano</div>
-        <div class="wdetail">🇧🇷 1 × 0 🏴󠁧󠁢󠁳󠁣󠁴󠁿 · 4 apostadores</div>
+        <div class="wname">Everton Bergstran, Jonathas Araújo, Aurélio Fagundes, Jessica Espinola, Victor Rocha</div>
+        <div class="wdetail">🇧🇷 2 × 0 🇯🇵 · 5 apostadores</div>
       </div>
       <div>
-        <div class="wprize">R$ 195,00</div>
+        <div class="wprize">R$ 84,00</div>
         <div class="wprize-lbl">por pessoa</div>
       </div>
     </div>
     <div class="wrow">
       <div class="wrank ">7</div>
       <div class="winfo">
-        <div class="wname">Luiz Assunção, André Paiva, Fernanda Fitipaldi, Mikaelly Araujo, Gustavo Silva, Eduardo Santos</div>
-        <div class="wdetail">🇧🇷 3 × 1 🏴󠁧󠁢󠁳󠁣󠁴󠁿 · 6 apostadores</div>
+        <div class="wname">André Faria, Danielle Jara, Amanda Serrazes, Daniel Bastos, André Paiva, Ana Carvalho, Matheus Saliba, Larissa Nunes</div>
+        <div class="wdetail">🇧🇷 2 × 1 🇯🇵 · 8 apostadores</div>
       </div>
       <div>
-        <div class="wprize">R$ 130,00</div>
-        <div class="wprize-lbl">por pessoa</div>
-      </div>
-    </div>
-    <div class="wrow">
-      <div class="wrank ">8</div>
-      <div class="winfo">
-        <div class="wname">Valdene Santos, Daniel Freitas, Luisa Lage, Lucas Santiago, Jeane Silva, Ana Cecilia Garbazza, Filipe Couto, Victor Rocha</div>
-        <div class="wdetail">🇧🇷 2 × 1 🏴󠁧󠁢󠁳󠁣󠁴󠁿 · 8 apostadores</div>
-      </div>
-      <div>
-        <div class="wprize">R$ 97,50</div>
-        <div class="wprize-lbl">por pessoa</div>
-      </div>
-    </div>
-    <div class="wrow">
-      <div class="wrank ">9</div>
-      <div class="winfo">
-        <div class="wname">Eric Isamo, Danielle Jara, Ernildo Pereira, Amanda Serrazes, Valdir Freitas, Renato Fedele, Mateus Becker, Larissa Lourenço, Larissa Novais, Luiz Pereira, Yuri Laplaca, Pedro Aires</div>
-        <div class="wdetail">🇧🇷 2 × 0 🏴󠁧󠁢󠁳󠁣󠁴󠁿 · 12 apostadores</div>
-      </div>
-      <div>
-        <div class="wprize">R$ 65,00</div>
+        <div class="wprize">R$ 52,50</div>
         <div class="wprize-lbl">por pessoa</div>
       </div>
     </div></div>
   </div>
 
   <div class="card full">
-    <div class="card-title">⬛ Todos os Participantes (<span id="ap-count">39</span>)</div>
+    <div class="card-title">⬛ Todos os Participantes (<span id="ap-count">21</span>)</div>
     <div class="apostadores-grid" id="apgrid">
     <div class="ap-card">
       <div class="ap-avatar" style="background:#166534">AS</div>
       <div class="ap-info">
         <div class="ap-name">Amanda Serrazes</div>
-        <div class="ap-palpite">Brasil 2 × 0 Escócia</div>
+        <div class="ap-palpite">Brasil 2 × 1 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#1e6fa8">AG</div>
+      <div class="ap-avatar" style="background:#1e6fa8">AC</div>
       <div class="ap-info">
-        <div class="ap-name">Ana Cecilia Garbazza</div>
-        <div class="ap-palpite">Brasil 2 × 1 Escócia</div>
+        <div class="ap-name">Ana Carvalho</div>
+        <div class="ap-palpite">Brasil 2 × 1 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#6d28d9">AC</div>
-      <div class="ap-info">
-        <div class="ap-name">Ana Coutinho</div>
-        <div class="ap-palpite">Brasil 1 × 1 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#be185d">AF</div>
+      <div class="ap-avatar" style="background:#6d28d9">AF</div>
       <div class="ap-info">
         <div class="ap-name">André Faria</div>
-        <div class="ap-palpite">Brasil 1 × 1 Escócia</div>
+        <div class="ap-palpite">Brasil 2 × 1 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#b45309">AP</div>
+      <div class="ap-avatar" style="background:#be185d">AP</div>
       <div class="ap-info">
         <div class="ap-name">André Paiva</div>
-        <div class="ap-palpite">Brasil 3 × 1 Escócia</div>
+        <div class="ap-palpite">Brasil 2 × 1 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#0891b2">AF</div>
+      <div class="ap-avatar" style="background:#b45309">AF</div>
       <div class="ap-info">
         <div class="ap-name">Aurélio Fagundes</div>
-        <div class="ap-palpite">Brasil 4 × 0 Escócia</div>
+        <div class="ap-palpite">Brasil 2 × 0 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#15803d">DF</div>
+      <div class="ap-avatar" style="background:#0891b2">DB</div>
       <div class="ap-info">
-        <div class="ap-name">Daniel Freitas</div>
-        <div class="ap-palpite">Brasil 2 × 1 Escócia</div>
+        <div class="ap-name">Daniel Bastos</div>
+        <div class="ap-palpite">Brasil 2 × 1 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#7c3aed">DJ</div>
+      <div class="ap-avatar" style="background:#15803d">DJ</div>
       <div class="ap-info">
         <div class="ap-name">Danielle Jara</div>
-        <div class="ap-palpite">Brasil 2 × 0 Escócia</div>
+        <div class="ap-palpite">Brasil 2 × 1 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#9a3412">ES</div>
-      <div class="ap-info">
-        <div class="ap-name">Eduardo Santos</div>
-        <div class="ap-palpite">Brasil 3 × 1 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#065f46">EI</div>
-      <div class="ap-info">
-        <div class="ap-name">Eric Isamo</div>
-        <div class="ap-palpite">Brasil 2 × 0 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#166534">EP</div>
+      <div class="ap-avatar" style="background:#7c3aed">EP</div>
       <div class="ap-info">
         <div class="ap-name">Ernildo Pereira</div>
-        <div class="ap-palpite">Brasil 2 × 0 Escócia</div>
+        <div class="ap-palpite">Brasil 3 × 1 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#1e6fa8">EB</div>
+      <div class="ap-avatar" style="background:#9a3412">EB</div>
       <div class="ap-info">
         <div class="ap-name">Everton Bergstran</div>
-        <div class="ap-palpite">Brasil 1 × 0 Escócia</div>
+        <div class="ap-palpite">Brasil 2 × 0 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#6d28d9">FF</div>
+      <div class="ap-avatar" style="background:#065f46">JE</div>
       <div class="ap-info">
-        <div class="ap-name">Fernanda Fitipaldi</div>
-        <div class="ap-palpite">Brasil 3 × 1 Escócia</div>
+        <div class="ap-name">Jessica Espinola</div>
+        <div class="ap-palpite">Brasil 2 × 0 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#be185d">FR</div>
-      <div class="ap-info">
-        <div class="ap-name">Fernando Romero</div>
-        <div class="ap-palpite">Brasil 1 × 0 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#b45309">FC</div>
-      <div class="ap-info">
-        <div class="ap-name">Filipe Couto</div>
-        <div class="ap-palpite">Brasil 2 × 1 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#0891b2">GS</div>
-      <div class="ap-info">
-        <div class="ap-name">Gustavo Silva</div>
-        <div class="ap-palpite">Brasil 3 × 1 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#15803d">JS</div>
-      <div class="ap-info">
-        <div class="ap-name">Jeane Silva</div>
-        <div class="ap-palpite">Brasil 2 × 1 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#7c3aed">JA</div>
+      <div class="ap-avatar" style="background:#166534">JA</div>
       <div class="ap-info">
         <div class="ap-name">Jonathas Araújo</div>
-        <div class="ap-palpite">Brasil 0 × 0 Escócia</div>
+        <div class="ap-palpite">Brasil 2 × 0 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#9a3412">KM</div>
+      <div class="ap-avatar" style="background:#1e6fa8">KM</div>
       <div class="ap-info">
         <div class="ap-name">Karen Marcolongo</div>
-        <div class="ap-palpite">Brasil 3 × 0 Escócia</div>
+        <div class="ap-palpite">Brasil 1 × 0 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#065f46">LL</div>
+      <div class="ap-avatar" style="background:#6d28d9">LN</div>
       <div class="ap-info">
-        <div class="ap-name">Larissa Lourenço</div>
-        <div class="ap-palpite">Brasil 2 × 0 Escócia</div>
+        <div class="ap-name">Larissa Nunes</div>
+        <div class="ap-palpite">Brasil 2 × 1 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#166534">LN</div>
+      <div class="ap-avatar" style="background:#be185d">LP</div>
       <div class="ap-info">
-        <div class="ap-name">Larissa Novais</div>
-        <div class="ap-palpite">Brasil 2 × 0 Escócia</div>
+        <div class="ap-name">Leticia Penna</div>
+        <div class="ap-palpite">Brasil 3 × 1 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#1e6fa8">LS</div>
+      <div class="ap-avatar" style="background:#b45309">LS</div>
       <div class="ap-info">
         <div class="ap-name">Lucas Santiago</div>
-        <div class="ap-palpite">Brasil 2 × 1 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#6d28d9">LL</div>
-      <div class="ap-info">
-        <div class="ap-name">Luisa Lage</div>
-        <div class="ap-palpite">Brasil 2 × 1 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#be185d">LA</div>
-      <div class="ap-info">
-        <div class="ap-name">Luiz Assunção</div>
-        <div class="ap-palpite">Brasil 3 × 1 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#b45309">LP</div>
-      <div class="ap-info">
-        <div class="ap-name">Luiz Pereira</div>
-        <div class="ap-palpite">Brasil 2 × 0 Escócia</div>
+        <div class="ap-palpite">Brasil 3 × 2 Japão</div>
       </div>
     </div>
     <div class="ap-card">
       <div class="ap-avatar" style="background:#0891b2">MB</div>
       <div class="ap-info">
         <div class="ap-name">Mateus Becker</div>
-        <div class="ap-palpite">Brasil 2 × 0 Escócia</div>
+        <div class="ap-palpite">Brasil 3 × 0 Japão</div>
       </div>
     </div>
     <div class="ap-card">
       <div class="ap-avatar" style="background:#15803d">MS</div>
       <div class="ap-info">
         <div class="ap-name">Matheus Saliba</div>
-        <div class="ap-palpite">Brasil 3 × 0 Escócia</div>
+        <div class="ap-palpite">Brasil 2 × 1 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#7c3aed">MA</div>
-      <div class="ap-info">
-        <div class="ap-name">Maurigreyck Albano</div>
-        <div class="ap-palpite">Brasil 1 × 0 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#9a3412">MG</div>
+      <div class="ap-avatar" style="background:#7c3aed">MG</div>
       <div class="ap-info">
         <div class="ap-name">Mayara Guimarães</div>
-        <div class="ap-palpite">Brasil 1 × 0 Escócia</div>
+        <div class="ap-palpite">Brasil 1 × 2 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#065f46">MA</div>
-      <div class="ap-info">
-        <div class="ap-name">Mikaelly Araujo</div>
-        <div class="ap-palpite">Brasil 3 × 1 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#166534">PM</div>
-      <div class="ap-info">
-        <div class="ap-name">Paula Morishita</div>
-        <div class="ap-palpite">Brasil 4 × 0 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#1e6fa8">PA</div>
+      <div class="ap-avatar" style="background:#9a3412">PA</div>
       <div class="ap-info">
         <div class="ap-name">Pedro Aires</div>
-        <div class="ap-palpite">Brasil 2 × 0 Escócia</div>
+        <div class="ap-palpite">Brasil 3 × 1 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#6d28d9">RH</div>
-      <div class="ap-info">
-        <div class="ap-name">Rafael Holanda</div>
-        <div class="ap-palpite">Brasil 3 × 0 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#be185d">RF</div>
-      <div class="ap-info">
-        <div class="ap-name">Renato Fedele</div>
-        <div class="ap-palpite">Brasil 2 × 0 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#b45309">RA</div>
-      <div class="ap-info">
-        <div class="ap-name">Roberto de Andrade</div>
-        <div class="ap-palpite">Brasil 5 × 2 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#0891b2">VS</div>
-      <div class="ap-info">
-        <div class="ap-name">Valdene Santos</div>
-        <div class="ap-palpite">Brasil 2 × 1 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#15803d">VF</div>
-      <div class="ap-info">
-        <div class="ap-name">Valdir Freitas</div>
-        <div class="ap-palpite">Brasil 2 × 0 Escócia</div>
-      </div>
-    </div>
-    <div class="ap-card">
-      <div class="ap-avatar" style="background:#7c3aed">VR</div>
+      <div class="ap-avatar" style="background:#065f46">VR</div>
       <div class="ap-info">
         <div class="ap-name">Victor Rocha</div>
-        <div class="ap-palpite">Brasil 2 × 1 Escócia</div>
+        <div class="ap-palpite">Brasil 2 × 0 Japão</div>
       </div>
     </div>
     <div class="ap-card">
-      <div class="ap-avatar" style="background:#9a3412">YL</div>
+      <div class="ap-avatar" style="background:#166534">YL</div>
       <div class="ap-info">
         <div class="ap-name">Yuri Laplaca</div>
-        <div class="ap-palpite">Brasil 2 × 0 Escócia</div>
+        <div class="ap-palpite">Brasil 3 × 1 Japão</div>
       </div>
     </div></div>
   </div>
 
 </main>
 
-<footer class="footer">⚽ Bolão Amigo — Brasil x Escócia · Copa do Mundo 2026</footer>
+<footer class="footer">⚽ Bolão Amigo — Brasil x Japão · Copa do Mundo 2026</footer>
 
 <!-- ══ MODAL ══ -->
 <div class="modal-overlay" id="modal-overlay" onclick="closeModalOutside(event)">
@@ -944,20 +772,20 @@
       <div class="modal-title">Atualizar planilha do bolão</div>
       <button class="modal-close" onclick="closeModal()">×</button>
     </div>
-    <p class="modal-desc">Selecione o arquivo <strong>.xlsx</strong> atualizado do bolão. A planilha deve manter a mesma estrutura (coluna A = nome, B = gols Brasil, D = gols Escócia, a partir da linha 4).</p>
+    <p class="modal-desc">Selecione o arquivo <strong>.xlsx</strong> atualizado do bolão. A planilha deve manter a mesma estrutura (coluna A = nome, B = gols Brasil, D = gols Japão, a partir da linha 4).</p>
     <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-input').click()" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
       <div class="drop-icon">📂</div>
       <div class="drop-text">Clique ou arraste o arquivo aqui</div>
       <div class="drop-sub">Suporta .xlsx</div>
     </div>
-    <div class="file-preview" id="file-preview">
+    <div class="file-preview show" id="file-preview">
       <span>📄</span>
       <span id="file-name-preview">Bolão.xlsx</span>
     </div>
     <input type="file" id="file-input" accept=".xlsx" onchange="handleFileSelect(event)">
     <div class="modal-footer">
       <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
-      <button class="btn-apply" id="btn-apply" onclick="applyFile()">Aplicar dados</button>
+      <button class="btn-apply visible" id="btn-apply" onclick="applyFile()">Aplicar dados</button>
     </div>
   </div>
 </div>
@@ -968,198 +796,108 @@
 let participants = [
   {
     "name": "Karen Marcolongo",
-    "bra": 3,
-    "sco": 0
+    "bra": 1,
+    "jap": 0
   },
   {
     "name": "André Faria",
-    "bra": 1,
-    "sco": 1
-  },
-  {
-    "name": "Eric Isamo",
     "bra": 2,
-    "sco": 0
+    "jap": 1
   },
   {
     "name": "Everton Bergstran",
-    "bra": 1,
-    "sco": 0
+    "bra": 2,
+    "jap": 0
   },
   {
     "name": "Mayara Guimarães",
     "bra": 1,
-    "sco": 0
-  },
-  {
-    "name": "Luiz Assunção",
-    "bra": 3,
-    "sco": 1
+    "jap": 2
   },
   {
     "name": "Jonathas Araújo",
-    "bra": 0,
-    "sco": 0
+    "bra": 2,
+    "jap": 0
   },
   {
     "name": "Danielle Jara",
     "bra": 2,
-    "sco": 0
+    "jap": 1
   },
   {
     "name": "Ernildo Pereira",
-    "bra": 2,
-    "sco": 0
-  },
-  {
-    "name": "Valdene Santos",
-    "bra": 2,
-    "sco": 1
+    "bra": 3,
+    "jap": 1
   },
   {
     "name": "Amanda Serrazes",
     "bra": 2,
-    "sco": 0
+    "jap": 1
   },
   {
     "name": "Aurélio Fagundes",
-    "bra": 4,
-    "sco": 0
-  },
-  {
-    "name": "Roberto de Andrade",
-    "bra": 5,
-    "sco": 2
-  },
-  {
-    "name": "Daniel Freitas",
     "bra": 2,
-    "sco": 1
+    "jap": 0
   },
   {
-    "name": "Fernando Romero",
-    "bra": 1,
-    "sco": 0
-  },
-  {
-    "name": "Ana Coutinho",
-    "bra": 1,
-    "sco": 1
-  },
-  {
-    "name": "Luisa Lage",
+    "name": "Daniel Bastos",
     "bra": 2,
-    "sco": 1
+    "jap": 1
   },
   {
-    "name": "Paula Morishita",
-    "bra": 4,
-    "sco": 0
+    "name": "Leticia Penna",
+    "bra": 3,
+    "jap": 1
   },
   {
-    "name": "Valdir Freitas",
+    "name": "Jessica Espinola",
     "bra": 2,
-    "sco": 0
+    "jap": 0
   },
   {
     "name": "Lucas Santiago",
-    "bra": 2,
-    "sco": 1
-  },
-  {
-    "name": "Renato Fedele",
-    "bra": 2,
-    "sco": 0
-  },
-  {
-    "name": "Rafael Holanda",
     "bra": 3,
-    "sco": 0
+    "jap": 2
   },
   {
     "name": "André Paiva",
-    "bra": 3,
-    "sco": 1
+    "bra": 2,
+    "jap": 1
   },
   {
     "name": "Mateus Becker",
-    "bra": 2,
-    "sco": 0
-  },
-  {
-    "name": "Jeane Silva",
-    "bra": 2,
-    "sco": 1
-  },
-  {
-    "name": "Larissa Lourenço",
-    "bra": 2,
-    "sco": 0
-  },
-  {
-    "name": "Larissa Novais",
-    "bra": 2,
-    "sco": 0
-  },
-  {
-    "name": "Luiz Pereira",
-    "bra": 2,
-    "sco": 0
-  },
-  {
-    "name": "Ana Cecilia Garbazza",
-    "bra": 2,
-    "sco": 1
-  },
-  {
-    "name": "Fernanda Fitipaldi",
     "bra": 3,
-    "sco": 1
+    "jap": 0
+  },
+  {
+    "name": "Ana Carvalho",
+    "bra": 2,
+    "jap": 1
   },
   {
     "name": "Yuri Laplaca",
-    "bra": 2,
-    "sco": 0
-  },
-  {
-    "name": "Filipe Couto",
-    "bra": 2,
-    "sco": 1
+    "bra": 3,
+    "jap": 1
   },
   {
     "name": "Victor Rocha",
     "bra": 2,
-    "sco": 1
-  },
-  {
-    "name": "Mikaelly Araujo",
-    "bra": 3,
-    "sco": 1
-  },
-  {
-    "name": "Gustavo Silva",
-    "bra": 3,
-    "sco": 1
+    "jap": 0
   },
   {
     "name": "Matheus Saliba",
-    "bra": 3,
-    "sco": 0
+    "bra": 2,
+    "jap": 1
   },
   {
-    "name": "Eduardo Santos",
-    "bra": 3,
-    "sco": 1
-  },
-  {
-    "name": "Maurigreyck Albano",
-    "bra": 1,
-    "sco": 0
+    "name": "Larissa Nunes",
+    "bra": 2,
+    "jap": 1
   },
   {
     "name": "Pedro Aires",
-    "bra": 2,
-    "sco": 0
+    "bra": 3,
+    "jap": 1
   }
 ];
 
@@ -1180,9 +918,9 @@ function render() {
   const total = participants.length;
   const TOTAL_PRIZE = total * PRIZE_PER;
 
-  // score map
+  // japre map
   const sm = {};
-  participants.forEach(p => { const k=`${p.bra}x${p.sco}`; sm[k]=(sm[k]||0)+1; });
+  participants.forEach(p => { const k=`${p.bra}x${p.jap}`; sm[k]=(sm[k]||0)+1; });
   const sa = Object.entries(sm).map(([k,c])=>({k,c,prize:TOTAL_PRIZE/c})).sort((a,b)=>b.c-a.c);
   const maxC = sa[0].c;
 
@@ -1200,13 +938,13 @@ function render() {
 
   // mini stats
   const avgBra = (participants.reduce((s,p)=>s+p.bra,0)/total).toFixed(1).replace('.',',');
-  const avgSco = (participants.reduce((s,p)=>s+p.sco,0)/total).toFixed(1).replace('.',',');
+  const avgSco = (participants.reduce((s,p)=>s+p.jap,0)/total).toFixed(1).replace('.',',');
   const minBra = Math.min(...participants.map(p=>p.bra));
   const maxBra = Math.max(...participants.map(p=>p.bra));
   document.getElementById('ms-total').textContent = total;
   document.getElementById('ms-unique').textContent = Object.keys(sm).length;
   document.getElementById('ms-avgbra').textContent = avgBra;
-  document.getElementById('ms-avgsco').textContent = avgSco;
+  document.getElementById('ms-avgjap').textContent = avgSco;
   document.getElementById('ms-minbra').textContent = minBra;
   document.getElementById('ms-maxbra').textContent = maxBra;
 
@@ -1214,7 +952,7 @@ function render() {
   document.getElementById('pbar-list').innerHTML = sa.slice(0,8).map(s=>`
     <div class="pbar-item">
       <div class="pbar-head">
-        <span class="pbar-score">🇧🇷 ${s.k.replace('x',' × ')} 🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+        <span class="pbar-japre">🇧🇷 ${s.k.replace('x',' × ')} 🇯🇵</span>
         <span class="pbar-cnt">${s.c} aposta${s.c>1?'s':''}</span>
         <span class="pbar-prize">R$ ${s.prize.toLocaleString('pt-BR',{minimumFractionDigits:2})}</span>
       </div>
@@ -1223,9 +961,9 @@ function render() {
 
   // gol bars
   const braColors=['#22c55e','#16a34a','#15803d','#166534','#14532d','#052e16'];
-  const scoColors=['#60a5fa','#3b82f6','#2563eb','#1d4ed8','#1e40af'];
+  const japColors=['#60a5fa','#3b82f6','#2563eb','#1d4ed8','#1e40af'];
   const gBra={}, gSco={};
-  participants.forEach(p=>{gBra[p.bra]=(gBra[p.bra]||0)+1; gSco[p.sco]=(gSco[p.sco]||0)+1;});
+  participants.forEach(p=>{gBra[p.bra]=(gBra[p.bra]||0)+1; gSco[p.jap]=(gSco[p.jap]||0)+1;});
   const mBra=Math.max(...Object.values(gBra)), mSco=Math.max(...Object.values(gSco));
   document.getElementById('gbra').innerHTML = Object.entries(gBra).sort((a,b)=>+a[0]-+b[0]).map(([g,c],i)=>`
     <div class="gbar-row">
@@ -1233,21 +971,21 @@ function render() {
       <div class="gbar-track"><div class="gbar-fill" style="width:${(c/mBra*100).toFixed(0)}%;background:${braColors[i%braColors.length]}"></div></div>
       <div class="gbar-cnt">${c}</div>
     </div>`).join('');
-  document.getElementById('gsco').innerHTML = Object.entries(gSco).sort((a,b)=>+a[0]-+b[0]).map(([g,c],i)=>`
+  document.getElementById('gjap').innerHTML = Object.entries(gSco).sort((a,b)=>+a[0]-+b[0]).map(([g,c],i)=>`
     <div class="gbar-row">
       <div class="gbar-lbl">${g} gol${+g!==1?'s':''}</div>
-      <div class="gbar-track"><div class="gbar-fill" style="width:${(c/mSco*100).toFixed(0)}%;background:${scoColors[i%scoColors.length]}"></div></div>
+      <div class="gbar-track"><div class="gbar-fill" style="width:${(c/mSco*100).toFixed(0)}%;background:${japColors[i%japColors.length]}"></div></div>
       <div class="gbar-cnt">${c}</div>
     </div>`).join('');
 
   // donut
-  const vBra=participants.filter(p=>p.bra>p.sco).length;
-  const emp=participants.filter(p=>p.bra===p.sco).length;
-  const vSco=participants.filter(p=>p.bra<p.sco).length;
+  const vBra=participants.filter(p=>p.bra>p.jap).length;
+  const emp=participants.filter(p=>p.bra===p.jap).length;
+  const vSco=participants.filter(p=>p.bra<p.jap).length;
   const dData=[
     {label:'Vitória Brasil', count:vBra, color:'#16a34a'},
     {label:'Empate',         count:emp,  color:'#ca8a04'},
-    {label:'Vitória Escócia',count:vSco, color:'#3b82f6'},
+    {label:'Vitória Japão', count:vSco, color:'#bc002d'},
   ];
   const tot2=dData.reduce((s,d)=>s+d.count,0);
   const cx=65,cy=65,R=52,ri=32;
@@ -1270,9 +1008,9 @@ function render() {
 
   // premiados
   const ranked = Object.entries(sm).map(([k,c])=>{
-    const [bra,sco]=k.split('x');
-    const names=participants.filter(p=>p.bra==bra&&p.sco==sco).map(p=>p.name);
-    return {k,bra,sco,c,prize:TOTAL_PRIZE/c,names};
+    const [bra,jap]=k.split('x');
+    const names=participants.filter(p=>p.bra==bra&&p.jap==jap).map(p=>p.name);
+    return {k,bra,jap,c,prize:TOTAL_PRIZE/c,names};
   }).sort((a,b)=>b.prize-a.prize);
   const medals=['🥇','🥈','🥉'];
   document.getElementById('winners').innerHTML = ranked.map((s,i)=>`
@@ -1280,7 +1018,7 @@ function render() {
       <div class="wrank ${i===0?'gold':''}">${medals[i]||(i+1)}</div>
       <div class="winfo">
         <div class="wname">${s.names.join(', ')}</div>
-        <div class="wdetail">🇧🇷 ${s.bra} × ${s.sco} 🏴󠁧󠁢󠁳󠁣󠁴󠁿 · ${s.c} apostador${s.c>1?'es':''}</div>
+        <div class="wdetail">🇧🇷 ${s.bra} × ${s.jap} 🇯🇵 · ${s.c} apostador${s.c>1?'es':''}</div>
       </div>
       <div>
         <div class="wprize">R$ ${s.prize.toLocaleString('pt-BR',{minimumFractionDigits:2})}</div>
@@ -1295,7 +1033,7 @@ function render() {
       <div class="ap-avatar" style="background:${avatarColors[i%avatarColors.length]}">${initials(p.name)}</div>
       <div class="ap-info">
         <div class="ap-name">${p.name}</div>
-        <div class="ap-palpite">Brasil ${p.bra} × ${p.sco} Escócia</div>
+        <div class="ap-palpite">Brasil ${p.bra} × ${p.jap} Japão</div>
       </div>
     </div>`).join('');
 }
@@ -1338,7 +1076,7 @@ function applyFile() {
       const ws = wb.Sheets[wb.SheetNames[0]];
       const rows = XLSX.utils.sheet_to_json(ws, {header:1});
 
-      // detectar linhas de dados: col 0=nome, col 1=gols bra, col 3=gols sco a partir da linha com nome
+      // detectar linhas de dados: col 0=nome, col 1=gols bra, col 3=gols jap a partir da linha com nome
       const parsed = [];
       for(let i=0; i<rows.length; i++) {
         const r = rows[i];
@@ -1348,7 +1086,7 @@ function applyFile() {
         if(typeof nome === 'string' && nome.trim().length > 2
            && typeof gBra === 'number' && typeof gSco === 'number'
            && gBra >= 0 && gSco >= 0 && gBra <= 20 && gSco <= 20) {
-          parsed.push({ name: nome.trim(), bra: gBra, sco: gSco });
+          parsed.push({ name: nome.trim(), bra: gBra, jap: gSco });
         }
       }
       if(parsed.length < 2) throw new Error('Nenhum dado válido encontrado');
@@ -1391,7 +1129,7 @@ function downloadHTML() {
   const url  = URL.createObjectURL(blob);
   const a    = document.createElement('a');
   a.href     = url;
-  a.download = 'bolao_brasil_escocia.html';
+  a.download = 'bolao_brasil_ejapcia.html';
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
